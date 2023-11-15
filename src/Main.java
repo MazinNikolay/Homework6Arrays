@@ -51,5 +51,30 @@ public class Main {
             if (arrayInt[i] % 2 != 0) arrayInt[i]++;
         }
         System.out.println(Arrays.toString(arrayInt));
+
+        Object[] arrInt = {1, 2, 3, 5, 7, 6, 9};
+        Object[] arrFloat = {1.57f, 7.654f, 9.986f};
+        Object[] arrString = {"a", "ab", "B", "ABC"};
+
+        task1(arrInt);
+        task1(arrFloat);
+        task1(arrString);
+        task4(arrInt);
+    }
+
+    public static void task1(Object[] array) {
+        for (int i = 0; i < array.length; i++) {
+            if (i < array.length - 1) {
+                System.out.print(array[i] + ", ");
+            } else System.out.print(array[i]);
+        }
+        System.out.println();
+    }
+
+    public static void task4(Object[] array){
+        for (int i = 0; i < array.length; i++) {
+            if ((int)array[i] % 2 != 0) array[i]=(int)array[i]+1;
+        }
+        System.out.println(Arrays.toString(array));
     }
 }
